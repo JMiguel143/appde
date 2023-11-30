@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="addtocart.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+        <title>POS</title>
+    </head>
+    <body>
+        <div id="loginPage">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username">
+                <input type="password" id="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="posSystem" style="display: none;">
+        <div class="header">
+            <p class="logo">Point of Sale(POS)System</p>
+        </div>
+        
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+                </div>
+                <div class="head"><p>Order</p></div>
+                <div id="cartItem">Your order is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">$ 0.00</h2>
+                
+                </div>
+                <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+                
+            </div>
+        </div>
+    </div>
+        <script src="addtocart.js"></script>
+    </body>
+</html>
